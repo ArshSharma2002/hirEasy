@@ -1,4 +1,7 @@
 import React from 'react'
+import slide1 from './images/baby-sitter-2.jpg'
+import slide2 from './images/cloth-wash-1.jpg'
+import slide3 from './images/cloth-wash-2.jpg'
 
 const Home = () => {
   return (
@@ -14,35 +17,37 @@ const Home = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
 
-          <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+          <img width="100%" height="100%" className="blur-bg" src={slide1} />
   
           <div className="container">
-            <div className="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <div className="carousel-caption text-start text-dark">
+              <h1 className='fw-bold' >Struggling in finding maids ?</h1>
+              <p>Then you are at right place. we'll provide best services.</p>
               <p><a className="btn btn-lg btn-danger" href="#">Sign up today</a></p>
             </div>
           </div>
         </div>
         <div className="carousel-item">
-          <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+          
+          <img width="100%" height="100%" className="blur-bg" src={slide2} />
   
           <div className="container">
-            <div className="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <div className="carousel-caption text-dark">
+              <h1 className='fw-bold'>Are you looking for a job and want to provide services?</h1>
+              <p>Sign up today as a worker and get hired by clients today.</p>
               <p><a className="btn btn-lg btn-danger" href="#">Learn more</a></p>
             </div>
           </div>
         </div>
         <div className="carousel-item">
-          <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
-  
+
+          <img width="100%" height="100%" className="blur-bg" src={slide3} />
+
           <div className="container">
-            <div className="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
-              <p><a className="btn btn-lg btn-danger" href="#">Browse gallery</a></p>
+            <div className="carousel-caption text-end text-dark">
+              <h1 className='fw-bold'>Explore services we provide.</h1>
+              <p>Select the service and get the right match for you.</p>
+              <p><a className="btn btn-lg btn-danger" href="#">Browse services</a></p>
             </div>
           </div>
         </div>

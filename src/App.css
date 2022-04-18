@@ -105,3 +105,10 @@ body {
       margin-top: 7rem;
     }
   }
+
+
+
+  /* ********************** My own utility classes ******************** */
+.blur-bg{
+  filter:blur(2px);
+}
