@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 
 const WorkerSchema = new mongoose.Schema({
+
+    // experience - (ratings)
+    // address (hide)
+    // Gender/Age
+
+
     name : {
         type : String,
         required : true,   

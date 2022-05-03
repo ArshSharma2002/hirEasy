@@ -24,6 +24,7 @@ router.post("/", async (req, res) => {
             services : services
           });
           
+          console.log(worker)
           res.json(worker);
 
     } catch (error) {

@@ -1,7 +1,7 @@
 import React from 'react'
-import slide1 from './images/baby-sitter-2.jpg'
+import slide1 from './images/cook-1.jpg'
 import slide2 from './images/cloth-wash-1.jpg'
-import slide3 from './images/cloth-wash-2.jpg'
+import slide3 from './images/baby-sitter-2.jpg'
 
 import feat1 from './images/jhadu-pocha.jpg'
 import feat2 from './images/oldage-1.jpg'
@@ -39,7 +39,7 @@ const Home = () => {
             <div className="carousel-caption text-dark">
               <h1 className='fw-bold'>Are you looking for a job and want to provide services?</h1>
               <p>Sign up today as a worker and get hired by clients today.</p>
-              <p><a className="btn btn-lg btn-danger" href="#">Learn more</a></p>
+              <p><a className="btn btn-lg btn-danger" href="/registerworker">Register now</a></p>
             </div>
           </div>
         </div>
