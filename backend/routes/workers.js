@@ -14,11 +14,26 @@ router.get("/",async (req,res)=>{
     }
 });
 
+router.get("/workerprofile/:_id",async (req,res)=>{
+    try {
+        worker = await Workers.findById(req.params._id)
+        console.log(worker)
+        res.json(worker)
+        
+    } catch (error) {
+        console.log(error)
+        res.status(400).send("Some Error Occured.");
+    }
+});
+
 router.post("/", async (req, res) => {
-    const {name,email,contact,services} = req.body;
+    const {name,age,gender,address,email,contact,services} = req.body;
     try {
         worker = await Workers.create({
-            name: name,      
+            name: name,   
+            age: age,
+            gender: gender,
+            address: address,   
             email: email,
             contact: contact,
             services : services

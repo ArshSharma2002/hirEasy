@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import Signup from './components/Signup';
 import Login from './components/Login';
+// import Profile from './components/Profile';
 
 function App() {
 
@@ -35,18 +36,17 @@ function App() {
 
     <Router>
 
-    <div>
     <Navbar/>
     {/* <Alert alert={alert}/> */}
     <Routes>
           <Route path='/services' element={<Services/>} />
           <Route path='/signup'  element={<Signup/>} />
           <Route path='/login' element={<Login/>} />
-          <Route path='/registerworker' element={<RegisterWorker/>} />
+          <Route path='/registerworker' element={<RegisterWorker/>} /> 
+          {/* <Route path='/workerprofile/:_id' element={<Profile _id={_id} />} />  */}
           <Route path="/" element={<Home/>} />
     </Routes>
     <Footer/>
-    </div>
     </Router>
     </WorkersState>
     // </AuthState>

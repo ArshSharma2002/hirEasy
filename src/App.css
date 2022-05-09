@@ -112,3 +112,18 @@ body {
 .blur-bg{
   filter:blur(2px);
 }
+
+
+.curve{
+  border-radius: 7.5%;
+}
+
+.ratings{
+  margin-left: 50px;
+}
+
+.ratingsManage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

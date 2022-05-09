@@ -32,8 +32,30 @@ const WorkersState = (props)=>{
 
       }
 
+      // fetching particular workers
+      const getWorkerProfile = async (_id)=>{
+
+        // API call for fetching note .
+        const url = host +"/api/workers/workerprofile/"+_id;
+        const response = await fetch(url, {
+          method: 'GET', // *GET, POST, PUT, DELETE, etc.
+          headers: {
+            'Content-Type': 'application/json'
+            // 'auth-token' : localStorage.getItem('token')
+            
+            
+          }
+        });
+
+        const json = await response.json();
+        console.log(json)
+
+        setWorkers(json)
+
+      }
+
       // Adding a worker
-      const addWorker = async (name,email,contact,services)=>{
+      const addWorker = async (name,age,gender,address,email,contact,services)=>{
         console.log("worker is added...")
 
         // API call for adding note .
@@ -46,7 +68,7 @@ const WorkersState = (props)=>{
             
           },
           // {title,description,tag} is an object title:title , desc:desc ...... so on .
-          body: JSON.stringify({name,email,contact,services}) 
+          body: JSON.stringify({name,age,gender,address,email,contact,services}) 
         });
         const newWorker = await response.json();
         console.log(newWorker);
@@ -55,7 +77,7 @@ const WorkersState = (props)=>{
 
     return(
         // if we wrap up the components inside <workerstate> tags than all those components can access these states . value = {{state:state , update:update}}
-        <WorkersContext.Provider value = {{workers,addWorker,getWorkers}}>
+        <WorkersContext.Provider value = {{workers,addWorker,getWorkers,getWorkerProfile}}>
             {props.children}
         </WorkersContext.Provider>
     )

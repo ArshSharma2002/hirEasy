@@ -1,18 +1,21 @@
 import React , {useContext , useState} from 'react'
 import WorkersContext from '../context/workers/WorkersContext'
+import Login from './Login';
 
 const RegisterWorker = () => {
 
 
   const workercontext = useContext(WorkersContext)
   const {addWorker} = workercontext;
-  const [newWorker, setNewWorker] = useState({name:"",email:"",contact:"",services:""})
-  const {name,email,contact,services} = newWorker;
+  const [newWorker, setNewWorker] = useState({name:"",age:"",gender:"",address:"",email:"",contact:"",services:""})
+  const {name,age,gender,address,email,contact,services} = newWorker;
+
+  const token = localStorage.getItem('token')
 
   const handleAddWorker = (e)=>{
       e.preventDefault()
-      addWorker(name,email,contact,services)
-      setNewWorker({name:"",email:"",contact:"",services:""})
+      addWorker(name,age,gender,address,email,contact,services)
+      setNewWorker({name:"",age:"",gender:"",address:"",email:"",contact:"",services:""})
   }
 
   const onChange=(e)=>{
@@ -21,11 +24,25 @@ const RegisterWorker = () => {
 }
 
   return (
+      <>
+    {!token ? <Login/> : 
     <div className='container my-5'>
         <form>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>
                 <input type="text" className="form-control" onChange={onChange} value={newWorker.name} id="name"  name="name" aria-describedby="emailHelp"/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="age" className="form-label">Age</label>
+                <input type="text" className="form-control" onChange={onChange} value={newWorker.age} id="age"  name="age" aria-describedby="emailHelp"/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="gender" className="form-label">Gender</label>
+                <input type="text" className="form-control" onChange={onChange} value={newWorker.gender} id="gender"  name="gender" aria-describedby="emailHelp"/>
+            </div>
+            <div className="mb-3">
+                <label htmlFor="address" className="form-label">Address</label>
+                <input type="text" className="form-control" onChange={onChange} value={newWorker.address} id="address"  name="address" aria-describedby="emailHelp"/>
             </div>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email address</label>
@@ -54,7 +71,8 @@ const RegisterWorker = () => {
             </div>
             <button type="submit" onClick={handleAddWorker} className="btn btn-primary">Submit</button>
         </form>
-    </div>
+    </div>}
+    </>
   )
 }
 

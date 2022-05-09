@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Login(props) {
+function Login() {
 
 
     const [credentials, setCedentials] = useState({email:"",password:""})
@@ -32,7 +32,6 @@ function Login(props) {
           if(json.success){
             // save the authtoken & redirect to home page using useNavigate hook.
             localStorage.setItem('token',json.authToken)
-            // navigate.push("/")
             navigate("/");
             // props.showAlert("Logged in Successfuly" , "success")
           }
@@ -42,44 +41,36 @@ function Login(props) {
     }
 
   return (
-    <div className="container my-3">
-      <h2>This is login page</h2>
-      <form onSubmit={handleOnLogin}>
-        <div className="mb-3">
-          <label for="email" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            aria-describedby="emailHelp"
-            value={credentials.email}
-            onChange={onChange}
-          />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+    <div class="modal modal-signin position-static d-block bg-secondary" tabindex="-1" role="dialog" id="modalSignin">
+  <div class="modal-dialog py-4 " role="document">
+    <div class="modal-content curve shadow py-4">
+      <div class="modal-header p-5 pb-5 border-bottom-0">
+        <h2 class="fw-bold mb-0">Login Now</h2>
+        {/* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" disabled></button> */}
+      </div>
+
+      <div class="modal-body p-5 pt-0"> 
+        <form class="" onSubmit={handleOnLogin}>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-4" value={credentials.email} onChange={onChange}id="email" name="email" placeholder="name@example.com"/>
+            <label for="email">Email address</label>
           </div>
-        </div>
-        <div className="mb-3">
-          <label for="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="password"
-            value={credentials.password}
-            onChange={onChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-4" value={credentials.password} onChange={onChange} id="password" name="password" placeholder="Password"/>
+            <label for="password">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Log in</button>
+          <small class="text-muted">By clicking Log in, you agree to the terms of use.</small>
+        </form>
+        <hr />
+        <button class="w-100 py-2 mb-2 btn btn-outline-primary text-center rounded-4" type="submit">
+            <Link to="/signup" >Sign up</Link> 
+          </button>
+      </div>
     </div>
+  </div>
+</div>
+
   );
 }
 
