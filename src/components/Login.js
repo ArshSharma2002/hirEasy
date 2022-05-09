@@ -59,7 +59,7 @@ function Login() {
             <input type="password" class="form-control rounded-4" value={credentials.password} onChange={onChange} id="password" name="password" placeholder="Password"/>
             <label for="password">Password</label>
           </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Log in</button>
+          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-dark" type="submit">Log in</button>
           <small class="text-muted">By clicking Log in, you agree to the terms of use.</small>
         </form>
         <hr />
