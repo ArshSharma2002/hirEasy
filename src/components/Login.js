@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -40,11 +40,15 @@ function Login() {
           // }
     }
 
+    const loadSignin=()=>{
+      navigate("/signup")
+    }
+
   return (
     <div class="modal modal-signin position-static d-block bg-secondary" tabindex="-1" role="dialog" id="modalSignin">
-  <div class="modal-dialog py-4 " role="document">
+  <div class="modal-dialog py-3 " role="document">
     <div class="modal-content curve shadow py-4">
-      <div class="modal-header p-5 pb-5 border-bottom-0">
+      <div class="modal-header px-5 pb-5 border-bottom-0">
         <h2 class="fw-bold mb-0">Login Now</h2>
         {/* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" disabled></button> */}
       </div>
@@ -53,18 +57,19 @@ function Login() {
         <form class="" onSubmit={handleOnLogin}>
           <div class="form-floating mb-3">
             <input type="email" class="form-control rounded-4" value={credentials.email} onChange={onChange}id="email" name="email" placeholder="name@example.com"/>
-            <label for="email">Email address</label>
+            <label for="email"><i class="fa fa-user"></i> Email address</label>
           </div>
           <div class="form-floating mb-3">
             <input type="password" class="form-control rounded-4" value={credentials.password} onChange={onChange} id="password" name="password" placeholder="Password"/>
-            <label for="password">Password</label>
+            <label for="password"><i class="fa fa-lock"></i> Password</label>
           </div>
           <button class="w-100 mb-2 btn btn-lg rounded-4 btn-dark" type="submit">Log in</button>
           <small class="text-muted">By clicking Log in, you agree to the terms of use.</small>
         </form>
         <hr />
-        <button class="w-100 py-2 mb-2 btn btn-outline-primary text-center rounded-4" type="submit">
-            <Link to="/signup" >Sign up</Link> 
+        <p className="text-center" >OR</p>
+        <button onClick={loadSignin} class="w-100 py-2 mb-2 btn btn-lg btn-primary text-center rounded-4" type="submit">
+            Sign up
           </button>
       </div>
     </div>

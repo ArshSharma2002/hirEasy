@@ -7,15 +7,15 @@ const RegisterWorker = () => {
 
   const workercontext = useContext(WorkersContext)
   const {addWorker} = workercontext;
-  const [newWorker, setNewWorker] = useState({name:"",age:"",gender:"",address:"",email:"",contact:"",services:""})
-  const {name,age,gender,address,email,contact,services} = newWorker;
+  const [newWorker, setNewWorker] = useState({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:""})
+  const {name,age,gender,address,email,contact,services,experience} = newWorker;
 
   const token = localStorage.getItem('token')
 
   const handleAddWorker = (e)=>{
       e.preventDefault()
-      addWorker(name,age,gender,address,email,contact,services)
-      setNewWorker({name:"",age:"",gender:"",address:"",email:"",contact:"",services:""})
+      addWorker(name,age,gender,address,email,contact,services,experience)
+      setNewWorker({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:""})
   }
 
   const onChange=(e)=>{
@@ -55,6 +55,10 @@ const RegisterWorker = () => {
             <div className="mb-3">
                 <label htmlFor="services" className="form-label">Services</label>
                 <input type="text" className="form-control" onChange={onChange} value={newWorker.services} id="services" name="services" />
+            </div>
+            <div className="mb-3">
+                <label htmlFor="experience" className="form-label">Experience</label>
+                <input type="text" className="form-control" onChange={onChange} value={newWorker.experience} id="experience" name="experience" />
             </div>
             {/* <div className="mb-3">
                 <label htmlFor="services" className="form-label">Services</label>

@@ -36,6 +36,10 @@ const WorkerSchema = new mongoose.Schema({
     services : {
         type: String,
         required:true
+    },
+    experience : {
+        type: String,
+        required:true
     }
 
     // baby sitting

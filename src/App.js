@@ -11,10 +11,12 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useLocation
 } from "react-router-dom";
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Contactus from './components/Contactus';
 // import Profile from './components/Profile';
 
 function App() {
@@ -42,6 +44,7 @@ function App() {
           <Route path='/services' element={<Services/>} />
           <Route path='/signup'  element={<Signup/>} />
           <Route path='/login' element={<Login/>} />
+          <Route path='/contactus' element={<Contactus/>} />
           <Route path='/registerworker' element={<RegisterWorker/>} /> 
           {/* <Route path='/workerprofile/:_id' element={<Profile _id={_id} />} />  */}
           <Route path="/" element={<Home/>} />
