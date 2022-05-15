@@ -2,7 +2,7 @@ import React , {useContext , useState} from 'react'
 import WorkersContext from '../context/workers/WorkersContext'
 import Login from './Login';
 
-const RegisterWorker = () => {
+const RegisterWorker = (props) => {
 
 
   const workercontext = useContext(WorkersContext)
@@ -16,6 +16,7 @@ const RegisterWorker = () => {
       e.preventDefault()
       addWorker(name,age,gender,address,email,contact,services,experience)
       setNewWorker({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:""})
+      props.showAlert("Worker Registered Successfuly","success")
   }
 
   const onChange=(e)=>{

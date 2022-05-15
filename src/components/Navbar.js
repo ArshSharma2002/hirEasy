@@ -18,16 +18,15 @@ function Navbar(props) {
 
     const handleLogout = ()=>{
       localStorage.removeItem('token');
-      // navigate.push("/login")
       navigate("/login");
-      // props.showAlert("Logged Out Successfuly" , "success")
+      props.showAlert("Logged Out Successfuly" , "success")
     }
 
   return (
       <header>
       <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">MaidEasy</a>
+          <a className="navbar-brand" href="/">hirEasy</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

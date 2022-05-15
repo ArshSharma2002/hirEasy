@@ -1,16 +1,16 @@
 import React , {useContext} from 'react'
 import wrImg from './images/cook-1.jpg'
-import WorkersContext from '../context/workers/WorkersContext';
-// import {
-//   Link
-// } from "react-router-dom";
+// import WorkersContext from '../context/workers/WorkersContext';
+import {
+  Link
+} from "react-router-dom";
 
 const ServiceItem = (props) => {
   const {worker} = props;
   const {experience} = worker;
   var exp = experience;
   let rating = 1
-  if (exp<15) {
+  if (exp>15) {
     rating = 4.5
   }
   else if(exp<15 && exp>10){
@@ -23,15 +23,8 @@ const ServiceItem = (props) => {
     rating = 2
   }
 
-  const workerscontext = useContext(WorkersContext)
-  const {getWorkerProfile} = workerscontext
+  const path = `/workerprofile/${worker._id}`
 
-
-
-  const getWorker = (e)=>{
-    e.preventDefault()
-    getWorkerProfile(worker._id)
-  }
 
   return (
 
@@ -43,11 +36,10 @@ const ServiceItem = (props) => {
 
                 <h5 className="card-title">Name : {worker.name}</h5><span className="ratings badge rounded-pill bg-dark">{rating}⭐</span>
               </span>
-                <h5 className="card-text">Contact : {worker.contact}</h5>
                 <h5 className="card-text">Service : {worker.services}</h5>
-            <button type="submit" className="btn btn-danger my-2" onClick={getWorker} >View Profile</button>
+                <h5 className="card-text">Experience : {worker.experience}</h5>
 
-        {/* {isPreviewShown && <Profile worker={worker} />} */}
+            <Link className="btn btn-danger my-2" state={{ _id: worker._id }} to={path} >View Profile</Link>
             </div>
         </div>
   )

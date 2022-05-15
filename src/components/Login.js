@@ -1,8 +1,7 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
-
+function Login(props) {
 
     const [credentials, setCedentials] = useState({email:"",password:""})
 
@@ -33,11 +32,11 @@ function Login() {
             // save the authtoken & redirect to home page using useNavigate hook.
             localStorage.setItem('token',json.authToken)
             navigate("/");
-            // props.showAlert("Logged in Successfuly" , "success")
+            props.showAlert("Logged in Successfuly" , "success")
           }
-          // else{
-          //   props.showAlert("Invalid details" , "danger")
-          // }
+          else{
+            props.showAlert("Invalid details" , "danger")
+          }
     }
 
     const loadSignin=()=>{
@@ -46,7 +45,7 @@ function Login() {
 
   return (
     <div class="modal modal-signin position-static d-block bg-secondary" tabindex="-1" role="dialog" id="modalSignin">
-  <div class="modal-dialog py-3 " role="document">
+  <div class="modal-dialog " role="document">
     <div class="modal-content curve shadow py-4">
       <div class="modal-header px-5 pb-5 border-bottom-0">
         <h2 class="fw-bold mb-0">Login Now</h2>

@@ -32,11 +32,11 @@ function Signup(props) {
             // save the authtoken & redirect to login page using useNavigate hook.
             localStorage.setItem('token',json.authToken)
             navigate("/login");
-            // props.showAlert("Account Created Successfully" , "success")
+            props.showAlert("Account Created Successfully" , "success")
           }
-          // else{
-          //   props.showAlert("Invalid details" , "danger")
-          // }
+          else{
+            props.showAlert("Invalid details" , "danger")
+          }
           
     }
 
