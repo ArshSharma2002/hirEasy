@@ -6,6 +6,7 @@ import slide3 from './images/baby-sitter-2.jpg'
 import feat1 from './images/jhadu-pocha.jpg'
 import feat2 from './images/oldage-1.jpg'
 import feat3 from './images/baby-sitter-1.jpg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -21,37 +22,37 @@ const Home = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
 
-          <img width="100%" height="100%" className="blur-bg" src={slide1} />
+          <img width="100%" height="100%" alt='...' className="blur-bg"  src={slide1} />
   
           <div className="container">
             <div className="carousel-caption text-start text-dark">
               <h1 className='fw-bold' >Struggling in finding maids ?</h1>
               <p>Then you are at right place. we'll provide best services.</p>
-              <p><a className="btn btn-lg btn-danger" href="#">Sign up today</a></p>
+              <p><Link className="btn btn-lg btn-danger" to="/signup">Sign up today</Link></p>
             </div>
           </div>
         </div>
         <div className="carousel-item">
           
-          <img width="100%" height="100%" className="blur-bg" src={slide2} />
+          <img width="100%" height="100%" alt='...' className="blur-bg" src={slide2} />
   
           <div className="container">
             <div className="carousel-caption text-dark">
               <h1 className='fw-bold'>Are you looking for a job and want to provide services?</h1>
               <p>Sign up today as a worker and get hired by clients today.</p>
-              <p><a className="btn btn-lg btn-danger" href="/registerworker">Register now</a></p>
+              <p><Link className="btn btn-lg btn-danger" to="/registerworker">Register now</Link></p>
             </div>
           </div>
         </div>
         <div className="carousel-item">
 
-          <img width="100%" height="100%" className="blur-bg" src={slide3} />
+          <img width="100%" height="100%" alt='...' className="blur-bg" src={slide3} />
 
           <div className="container">
             <div className="carousel-caption text-end text-dark">
               <h1 className='fw-bold'>Explore services we provide.</h1>
               <p>Select the service and get the right match for you.</p>
-              <p><a className="btn btn-lg btn-danger" href="#">Browse services</a></p>
+              <p><Link className="btn btn-lg btn-danger" to="/services">Browse services</Link></p>
             </div>
           </div>
         </div>
@@ -80,7 +81,7 @@ const Home = () => {
   
           <h2>Heading</h2>
           <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a className="btn btn-danger" href="#">View details »</a></p>
+          <p><a className="btn btn-danger" href="/">View details »</a></p>
         </div>
         {/* <!-- /.col-lg-4 --> */}
         <div className="col-lg-4">
@@ -88,7 +89,7 @@ const Home = () => {
   
           <h2>Heading</h2>
           <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-          <p><a className="btn btn-danger" href="#">View details »</a></p>
+          <p><a className="btn btn-danger" href="/">View details »</a></p>
         </div>
         {/* <!-- /.col-lg-4 --> */}
         <div className="col-lg-4">
@@ -96,7 +97,7 @@ const Home = () => {
   
           <h2>Heading</h2>
           <p>And lastly this, the third column of representative placeholder content.</p>
-          <p><a className="btn btn-danger" href="#">View details »</a></p>
+          <p><a className="btn btn-danger" href="/">View details »</a></p>
         </div>
         {/* <!-- /.col-lg-4 --> */}
       </div>
@@ -113,9 +114,8 @@ const Home = () => {
           <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
         </div>
         <div className="col-md-5">
-          {/* <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> */}
 
-          <img width="100%" height="100%" className="" src={feat1} />
+          <img width="100%" height="100%" alt='...' className="" src={feat1} />
   
         </div>
       </div>
@@ -128,9 +128,8 @@ const Home = () => {
           <p className="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
         </div>
         <div className="col-md-5 order-md-1">
-          {/* <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> */}
 
-          <img width="100%" height="100%" className="" src={feat2} />
+          <img width="100%" height="100%" alt='...' className="" src={feat2} />
   
         </div>
       </div>
@@ -143,9 +142,8 @@ const Home = () => {
           <p className="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
         </div>
         <div className="col-md-5">
-          {/* <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> */}
 
-          <img width="100%" height="100%" className="" src={feat3} />
+          <img width="100%" height="100%" className="" alt='...' src={feat3} />
   
         </div>
       </div>
