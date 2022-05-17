@@ -28,7 +28,7 @@ const Profile = () => {
                         <div className="about-text go-to">
                             <h3 className="dark-color">Hello , Sir !</h3>
                             <h4 className="dark-color lead">My name is <span className='text-dark fs-2 fw-bolder' >{workers.name}</span> </h4>
-                            <h5>I provide services as a <mark>{workers.services}</mark> for customers of Punjab. I have experience of {workers.experience} years in this field and provide excellent services. My details are given below . check them out :</h5>
+                            <h5>I provide services as a {workers.services} for customers of {workers.city}. I have experience of {workers.experience} years in this field and provide excellent services. My details are given below . check them out :</h5>
                             <div className="row about-list">
                                 <div className="col-md-6">
                                     <div className="media">

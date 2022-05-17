@@ -7,15 +7,15 @@ const RegisterWorker = (props) => {
 
   const workercontext = useContext(WorkersContext)
   const {addWorker} = workercontext;
-  const [newWorker, setNewWorker] = useState({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:""})
-  const {name,age,gender,address,email,contact,services,experience} = newWorker;
+  const [newWorker, setNewWorker] = useState({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:"",city:""})
+  const {name,age,gender,address,email,contact,services,experience,city} = newWorker;
 
   const token = localStorage.getItem('token')
 
   const handleAddWorker = (e)=>{
       e.preventDefault()
-      addWorker(name,age,gender,address,email,contact,services,experience)
-      setNewWorker({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:""})
+      addWorker(name,age,gender,address,email,contact,services,experience,city)
+      setNewWorker({name:"",age:"",gender:"",address:"",email:"",contact:"",services:"",experience:"",city:""})
       props.showAlert("Worker Registered Successfuly","success")
   }
 
@@ -26,57 +26,91 @@ const RegisterWorker = (props) => {
 
   return (
       <>
-    {!token ? <Login/> : 
-    <div className='container my-5'>
-        <form>
-            <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" className="form-control" onChange={onChange} value={newWorker.name} id="name"  name="name" aria-describedby="emailHelp"/>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="age" className="form-label">Age</label>
-                <input type="text" className="form-control" onChange={onChange} value={newWorker.age} id="age"  name="age" aria-describedby="emailHelp"/>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="gender" className="form-label">Gender</label>
-                <input type="text" className="form-control" onChange={onChange} value={newWorker.gender} id="gender"  name="gender" aria-describedby="emailHelp"/>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="address" className="form-label">Address</label>
-                <input type="text" className="form-control" onChange={onChange} value={newWorker.address} id="address"  name="address" aria-describedby="emailHelp"/>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email address</label>
-                <input type="email" className="form-control" onChange={onChange} value={newWorker.email} id="email"  name="email" aria-describedby="emailHelp"/>
-            </div>
-            <div className="mb-3">
-                <label htmlFor="contact" className="form-label">Contact</label>
-                <input type="tel" className="form-control" onChange={onChange} value={newWorker.contact} id="contact" name="contact" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="services" className="form-label">Services</label>
-                <input type="text" className="form-control" onChange={onChange} value={newWorker.services} id="services" name="services" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="experience" className="form-label">Experience</label>
-                <input type="text" className="form-control" onChange={onChange} value={newWorker.experience} id="experience" name="experience" />
-            </div>
-            {/* <div className="mb-3">
-                <label htmlFor="services" className="form-label">Services</label>
-                <select onChange={onServiceChange} id="services" className="form-select" name="services" >
-                    <option value={newWorker.services} >Baby sitter</option>
-                    <option value={newWorker.services} >Cook</option>
-                    <option value={newWorker.services} >Laundry & Dishwasher </option>
-                    <option value={newWorker.services} >Complete service</option>
-                </select>
-            </div> */}
-            <div className="mb-3 form-check">
-                <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" onClick={handleAddWorker} className="btn btn-primary">Submit</button>
-        </form>
-    </div>}
+    {!token ? <Login/> :
+       
+       <div className="container m-3">
+
+<form class="row g-3">
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name='name' onChange={onChange} value={newWorker.name} />
+  </div>
+  <div class="col-md-6">
+    <label for="age" class="form-label">Age</label>
+    <input type="text" class="form-control" id="age" name='age' onChange={onChange} value={newWorker.age} />
+  </div>
+  <fieldset class="row my-3 mb-3">
+    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" onChange={onChange} value="M" id="gender" name="gender" />
+        <label class="form-check-label" for="gender">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" onChange={onChange} value="F" name="gender" id="gender" />
+        <label class="form-check-label" for="gender">
+          Female
+        </label>
+      </div>
+      <div class="form-check ">
+        <input class="form-check-input" type="radio" onChange={onChange} value="O" name="gender" id="gender" />
+        <label class="form-check-label" for="gender">
+          Others
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control"  id="email" name='email' onChange={onChange} value={newWorker.email} />
+  </div>
+
+  <div class="col-md-6">
+    <label for="contact" class="form-label">Contact</label>
+    <input type="text" class="form-control"  id="contact" name='contact' onChange={onChange} value={newWorker.contact} />
+  </div>
+  <div class="col-12">
+    <label for="address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="address" name='address' placeholder="1234 Main St" onChange={onChange} value={newWorker.address} />
+  </div>
+  <div class="col-md-6">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" name='city' id="city" onChange={onChange} value={newWorker.city} />
+  </div>
+  <div class="col-md-4">
+    <label for="services" class="form-label">Services</label>
+    <select id="services" name='services' onChange={onChange} value={newWorker.services} class="form-select">
+      <option selected>Baby sitter</option>
+      <option selected>Cook</option>
+      <option selected>Laundry</option>
+      <option selected>Old age care</option>
+      <option selected>Disable person's care</option>
+      <option selected>Gardening</option>
+      <option selected>Care taker</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="experience" class="form-label">Experience</label>
+    <input type="text" class="form-control" id="experience" name='experience' onChange={onChange} value={newWorker.experience} />
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck"/>
+      <label class="form-check-label" for="gridCheck">
+        by registering yourself you agreeing to our privacy policies
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" onClick={handleAddWorker} class="btn btn-primary">Register</button>
+  </div>
+</form>
+        </div>
+
+        }
     </>
   )
 }

@@ -16,6 +16,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Contactus from './components/Contactus';
 import Profile from './components/Profile';
+import About from './components/About';
 
 function App() {
 
@@ -39,13 +40,14 @@ function App() {
     <Navbar showAlert={showAlert} />
     <Alert alert={alert}/>
     <Routes>
-          <Route path='/services' element={<Services/>} />
-          <Route path='/signup'  element={<Signup showAlert={showAlert} />} />
-          <Route path='/login' element={<Login showAlert={showAlert} />} />
-          <Route path='/contactus' element={<Contactus/>} />
-          <Route path='/registerworker' element={<RegisterWorker showAlert={showAlert} />} /> 
-          <Route path='/workerprofile/:_id' element={<Profile/>} /> 
-          <Route path="/" element={<Home/>} />
+          <Route exact path='/services' element={<Services/>} />
+          <Route exact path='/signup'  element={<Signup showAlert={showAlert} />} />
+          <Route exact path='/login' element={<Login showAlert={showAlert} />} />
+          <Route exact path='/contactus' element={<Contactus/>} />
+          <Route exact path='/about' element={<About/>} />
+          <Route exact path='/registerworker' element={<RegisterWorker showAlert={showAlert} />} /> 
+          <Route exact path='/workerprofile/:_id' element={<Profile/>} /> 
+          <Route exact path="/" element={<Home/>} />
     </Routes>
     <Footer/>
     </Router>
