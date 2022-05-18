@@ -24,7 +24,7 @@ function Navbar(props) {
 
   return (
       <header>
-      <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <nav className="navDesign navbar navbar-expand-md fixed-top text-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">hirEasy</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@ function Navbar(props) {
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/aboutus">About us</Link>
+                <Link className="nav-link" to="/about">About us</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/services">Services</Link>

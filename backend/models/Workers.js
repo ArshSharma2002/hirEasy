@@ -2,9 +2,6 @@ const mongoose = require('mongoose');
 
 const WorkerSchema = new mongoose.Schema({
 
-    // experience - (ratings)
-    // address (hide)
-    // Gender/Age
 
 
     name : {
@@ -20,6 +17,10 @@ const WorkerSchema = new mongoose.Schema({
         required : true
     },
     address : {
+        type:String,
+        required : true
+    },
+    city : {
         type:String,
         required : true
     },
@@ -41,11 +42,6 @@ const WorkerSchema = new mongoose.Schema({
         type: String,
         required:true
     }
-
-    // baby sitting
-    // maid (cooking )
-    // maid (washing)
-    // maid (complete package)
 
     
   });

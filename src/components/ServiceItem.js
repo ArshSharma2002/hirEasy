@@ -39,7 +39,7 @@ const ServiceItem = (props) => {
                 <h5 className="card-text">Service : {worker.services}</h5>
                 <h5 className="card-text">Experience : {worker.experience}</h5>
 
-            <Link className="btn btn-danger my-2" state={{ _id: worker._id }} to={path} >View Profile</Link>
+            <Link className="btn btn-primary my-2" state={{ _id: worker._id }} to={path} >View Profile</Link>
             </div>
         </div>
   )

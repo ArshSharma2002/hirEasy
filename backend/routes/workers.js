@@ -27,7 +27,7 @@ router.get("/workerprofile/:_id",async (req,res)=>{
 });
 
 router.post("/", async (req, res) => {
-    const {name,age,gender,address,email,contact,services,experience} = req.body;
+    const {name,age,gender,address,email,contact,services,experience,city} = req.body;
     try {
         worker = await Workers.create({
             name: name,   
@@ -37,7 +37,8 @@ router.post("/", async (req, res) => {
             email: email,
             contact: contact,
             services : services,
-            experience : experience
+            experience : experience,
+            city: city
           });
           
           console.log(worker)

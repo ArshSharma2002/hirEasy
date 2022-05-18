@@ -19,7 +19,9 @@
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    color: #5a5a5a;
+    /* color: #5a5a5a; */
+    color: black;
+    background-image: linear-gradient(to right, rgb(16, 70, 131) , rgb(94, 208, 243));
   }
   
   
@@ -219,15 +221,77 @@ margin: 0 0 5px;
 font-weight: 600;
 margin: 0;
 }
-mark {
-  background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+/* mark {
+  background-image: linear-gradient(rgba(89, 252, 83, 0.6), rgba(205, 245, 30, 0.6));
   background-size: 100% 3px;
   background-repeat: no-repeat;
   background-position: 0 bottom;
   background-color: transparent;
   padding: 0;
   color: currentColor;
-}
+} */
 .dark-color {
   color: #20247b;
 }
+
+/* about us css */
+
+img.aboutProfiles:hover{
+  height: 170;
+  width: 170;
+}
+
+i.socials{
+  color: black;
+  font-size: 2rem;
+}
+
+i.socials:hover{
+  color: gray;
+  font-size: 2.5rem;
+  transition: all 0.7s linear;
+}
+
+p.paraSocials{
+  display: inline;
+}
+
+/* div.aboutus::before{
+  background-image: url('./components/images/baby-sitter-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 920px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: " ";
+
+} */
+
+/* div.aboutus{
+  background-color: rgb(190, 214, 241);
+} */
+
+
+.navDesign{
+  background-color: rgb(21, 40, 105) ;
+}
+
+li.nav-item a , a.navbar-brand{
+  color: white;
+}
+
+footer{
+  background-color: rgb(21, 40, 105);
+  color: white;
+}
+
+div.card {
+  background-color: #b0ccf7;
+}
+
+
+

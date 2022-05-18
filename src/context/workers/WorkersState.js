@@ -55,7 +55,7 @@ const WorkersState = (props)=>{
       }
 
       // Adding a worker
-      const addWorker = async (name,age,gender,address,email,contact,services,experience)=>{
+      const addWorker = async (name,age,gender,address,email,contact,services,experience,city)=>{
         console.log("worker is added...")
 
         // API call for adding note .
@@ -68,7 +68,7 @@ const WorkersState = (props)=>{
             
           },
           // {title,description,tag} is an object title:title , desc:desc ...... so on .
-          body: JSON.stringify({name,age,gender,address,email,contact,services,experience}) 
+          body: JSON.stringify({name,age,gender,address,email,contact,services,experience,city}) 
         });
         const newWorker = await response.json();
         console.log(newWorker);
