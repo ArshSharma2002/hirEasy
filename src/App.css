@@ -290,7 +290,11 @@ footer{
 }
 
 div.card {
-  background-color: #b0ccf7;
+  background-color: #79bad6;
+}
+
+button a {
+  color: white;
 }
 
 

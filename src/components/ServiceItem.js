@@ -1,5 +1,5 @@
 import React , {useContext} from 'react'
-import wrImg from './images/cook-1.jpg'
+// import wrImg from './images/cook-1.jpg'
 // import WorkersContext from '../context/workers/WorkersContext';
 import {
   Link
@@ -22,6 +22,16 @@ const ServiceItem = (props) => {
   else{
     rating = 2
   }
+  
+  const {gender} = worker;
+  let proImg = 'https://bootdey.com/img/Content/avatar/avatar6.png'
+
+  if(gender==='M'){
+      proImg = 'https://bootdey.com/img/Content/avatar/avatar7.png'
+  }
+  else if(gender==='F'){
+      proImg = 'https://bootdey.com/img/Content/avatar/avatar8.png'
+  }
 
   const path = `/workerprofile/${worker._id}`
 
@@ -30,7 +40,7 @@ const ServiceItem = (props) => {
 
 
         <div className="card mx-4 my-4" style={{width: "25%"}}>
-            <img src={wrImg} className=" my-2 card-img-top" alt="..."/>
+            <img src={proImg} className=" my-2 card-img-top" alt="..."/>
             <div className="card-body">
               <span className='ratingsManage'>
 

@@ -16,6 +16,18 @@ const Profile = () => {
   
   }, [])
   
+  const {gender} = workers
+
+  let proImg = 'https://bootdey.com/img/Content/avatar/avatar6.png'
+
+  if(gender==='M'){
+      proImg = 'https://bootdey.com/img/Content/avatar/avatar7.png'
+  }
+  else if(gender==='F'){
+      proImg = 'https://bootdey.com/img/Content/avatar/avatar8.png'
+  }
+
+  
 
 
 
@@ -59,42 +71,15 @@ const Profile = () => {
                                     </div>
                                 </div>
                             </div>
+                    <p className='my-4 text-left' ><a className='btn btn-md col-md-6 btn-primary' href = {`mailto:${workers.email}?subject=For Hiring via hirEasy&body=This is to inform you that someone wants to hire you`}>Send Email</a></p>
                         </div>
                     </div>
                     <div className="col-lg-6">
                         <div className="about-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="..." />
+                            <img src={proImg} title="" alt="..." />
                         </div>
                     </div>
                 </div>
-                {/* <div className="counter">
-                    <div className="row">
-                        <div className="col-6 col-lg-3">
-                            <div className="count-data text-center">
-                                <h6 className="count h2" data-to="500" data-speed="500">500</h6>
-                                <p className="m-0px font-w-600">Happy Clients</p>
-                            </div>
-                        </div>
-                        <div className="col-6 col-lg-3">
-                            <div className="count-data text-center">
-                                <h6 className="count h2" data-to="150" data-speed="150">150</h6>
-                                <p className="m-0px font-w-600">Project Completed</p>
-                            </div>
-                        </div>
-                        <div className="col-6 col-lg-3">
-                            <div className="count-data text-center">
-                                <h6 className="count h2" data-to="850" data-speed="850">850</h6>
-                                <p className="m-0px font-w-600">Photo Capture</p>
-                            </div>
-                        </div>
-                        <div className="col-6 col-lg-3">
-                            <div className="count-data text-center">
-                                <h6 className="count h2" data-to="190" data-speed="190">190</h6>
-                                <p className="m-0px font-w-600">Telephonic Talk</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </section>
     </div>    

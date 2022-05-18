@@ -5,6 +5,10 @@ const Contactus = () => {
 
   const token = localStorage.getItem('token')
 
+  
+  // const userMailId = document.getElementById('userMailId').value
+  // const userEnquiry = document.getElementById('userEnquiry').value
+
   return (
     <div>
     {!token ? <Login/>:
@@ -17,11 +21,11 @@ const Contactus = () => {
       <div class="col-md-10 mx-auto col-lg-5">
         <form class="p-4 p-md-5 border rounded-3 bg-light">
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+            <input id="userMailId" type="email" class="form-control" placeholder="name@example.com"/>
             <label for="floatingInput"><i class="fa fa-user"></i> Email address</label>
           </div>
           <div class="form-floating mb-3">
-            <textarea type="text" style={{height: "159px"}} class="form-control" id="floatingPassword" placeholder="Password"/>
+            <textarea type="text" style={{height: "159px"}} class="form-control" id="userEnquiry" placeholder="Password"/>
             <label for="floatingPassword"><i class="fa fa-envelope"></i> Enquiry / Message</label>
           </div>
           <div class="checkbox mb-3">
@@ -30,6 +34,7 @@ const Contactus = () => {
             </label>
           </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+          {/* <button class="w-100 btn btn-lg btn-primary" type="submit"><a className='' href = {`mailto:sharmaarsh222@gmail.com?subject=Query from ${userMailId}&body=${userEnquiry}`}>Send Email</a></button> */}
           <hr class="my-4"/>
           <small class="text-muted">By clicking Submit, you agree to the terms of use.</small>
         </form>
