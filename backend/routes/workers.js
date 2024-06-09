@@ -4,7 +4,7 @@ const Workers = require("../models/Workers");
 
 router.get("/",async (req,res)=>{
     try {
-        worker = await Workers.find()
+        const worker = await Workers.find()
 
         res.json(worker)
         
@@ -16,7 +16,7 @@ router.get("/",async (req,res)=>{
 
 router.get("/workerprofile/:_id",async (req,res)=>{
     try {
-        worker = await Workers.findById(req.params._id)
+        const worker = await Workers.findById(req.params._id)
         console.log(worker)
         res.json(worker)
         
@@ -29,7 +29,7 @@ router.get("/workerprofile/:_id",async (req,res)=>{
 router.post("/", async (req, res) => {
     const {name,age,gender,address,email,contact,services,experience,city} = req.body;
     try {
-        worker = await Workers.create({
+        const worker = await Workers.create({
             name: name,   
             age: age,
             gender: gender,
