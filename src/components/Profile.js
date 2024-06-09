@@ -13,7 +13,7 @@ const Profile = () => {
   useEffect(() => {
     getWorkerProfile(_id)
   
-  })
+  },[])
   
   const {gender} = workers
 

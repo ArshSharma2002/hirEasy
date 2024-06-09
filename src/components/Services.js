@@ -11,7 +11,7 @@ const Services = () => {
   
   useEffect(() => {
     getWorkers();
-  })
+  },[])
   
 
   return (
