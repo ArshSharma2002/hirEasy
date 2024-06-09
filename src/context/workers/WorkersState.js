@@ -4,7 +4,7 @@ import WorkersContext from "./WorkersContext";
 
 const WorkersState = (props)=>{
 
-    const host = "http://localhost"
+    const host = "http://localhost:8000"
 
     const initialWorkers = [];
     

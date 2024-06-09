@@ -2,7 +2,7 @@ const express = require('express')
 const connectMongo = require('./db')
 const app = express()
 const cors = require('cors')
-const port = 80
+const port = 8000
 
 connectMongo();
 

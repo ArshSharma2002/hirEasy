@@ -5,7 +5,7 @@
 // const AuthState = (props) => {
 
 //     const createuser = async (name,email,password)=>{
-//         const response = await fetch(`http://localhost/api/auth/createuser`, {
+//         const response = await fetch(`http://localhost:8000/api/auth/createuser`, {
 //             method: 'POST', // *GET, POST, PUT, DELETE, etc.
 //             headers: {
 //               'Content-Type': 'application/json' 
@@ -30,7 +30,7 @@
 
 
 //     const loginuser = async (email,password)=>{
-//         const response = await fetch(`http://localhost/api/auth/login`, {
+//         const response = await fetch(`http://localhost:8000/api/auth/login`, {
 //             method: 'POST', // *GET, POST, PUT, DELETE, etc.
 //             headers: {
 //               'Content-Type': 'application/json' 

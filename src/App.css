@@ -18,8 +18,6 @@
 
 body {
     padding-top: 3rem;
-    padding-bottom: 3rem;
-    /* color: #5a5a5a; */
     color: black;
     background-image: linear-gradient(to right, rgb(16, 70, 131) , rgb(94, 208, 243));
   }

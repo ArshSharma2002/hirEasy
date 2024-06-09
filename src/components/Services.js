@@ -11,13 +11,13 @@ const Services = () => {
   
   useEffect(() => {
     getWorkers();
-  }, [])
+  })
   
 
   return (
     <>
     {!token ? <Login/> : 
-    <div className='d-flex align-items-center justify-content-center'>
+    <div className='d-flex align-items-center justify-content-center min-vh-100'>
       <div className='row container my-4 mx-2 d-flex justify-content-center'>
         
         {workers.map((worker)=>{

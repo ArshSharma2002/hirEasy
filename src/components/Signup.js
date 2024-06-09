@@ -11,13 +11,13 @@ function Signup(props) {
         
       };
 
-      let navigate = useNavigate();
+    let navigate = useNavigate();
 
     const handleOnSignin = async (e)=>{
         
         e.preventDefault();
         const {name,email,password} = credentials;
-        const response = await fetch(`http://localhost/api/auth/createuser`, {
+        const response = await fetch(`http://localhost:8000/api/auth/createuser`, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             headers: {
               'Content-Type': 'application/json' 
@@ -55,19 +55,19 @@ function Signup(props) {
         <form className="" onSubmit={handleOnSignin}>
           <div className="form-floating mb-3">
             <input type="text" className="form-control rounded-4" value={credentials.name} onChange={onChange}id="name" name="name" placeholder="name"/>
-            <label htmlFor="name"><i class="fa fa-user"></i> Name</label>
+            <label htmlFor="name"><i className="fa fa-user"></i> Name</label>
           </div>
           <div className="form-floating mb-3">
             <input type="email" className="form-control rounded-4" value={credentials.email} onChange={onChange}id="email" name="email" placeholder="name@example.com" minLength={5} required/>
-            <label htmlFor="email"><i class="fa fa-envelope"></i> Email address</label>
+            <label htmlFor="email"><i className="fa fa-envelope"></i> Email address</label>
           </div>
           <div className="form-floating mb-3">
             <input type="password" className="form-control rounded-4" value={credentials.password} onChange={onChange} id="password" name="password" placeholder="Password" minLength={5} required/>
-            <label htmlFor="password"><i class="fa fa-lock"></i> Password</label>
+            <label htmlFor="password"><i className="fa fa-lock"></i> Password</label>
           </div>
           <div className="form-floating mb-3">
             <input type="password" className="form-control rounded-4" value={credentials.cpassword} onChange={onChange} id="cpassword" name="cpassword" placeholder="Confirm Password" minLength={5} required/>
-            <label htmlFor="cpassword"><i class="fa fa-lock"></i> Confirm Password</label>
+            <label htmlFor="cpassword"><i className="fa fa-lock"></i> Confirm Password</label>
           </div>
           <button className="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
           <small className="text-muted">By clicking Sign up, you agree to the terms of use.</small>

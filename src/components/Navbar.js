@@ -32,8 +32,8 @@ function Navbar(props) {
         document.getElementById('nav').style.background="#b9e6fa";
         document.getElementById('footer').style.background="#b9e6fa";
         document.getElementById('footer').style.color="rgb(21, 40, 105)";
-        var elements = document.getElementsByClassName('navLinks');
-        for(var i = 0, length = elements.length; i < length; i++) {
+        let elements = document.getElementsByClassName('navLinks');
+        for(let i = 0, length = elements.length; i < length; i++) {
               elements[i].style.color="rgb(21, 40, 105)";
            
         }
@@ -46,8 +46,8 @@ function Navbar(props) {
         document.getElementById('nav').style.background="rgb(21, 40, 105)";
         document.getElementById('footer').style.background="rgb(21, 40, 105)";
         document.getElementById('footer').style.color="white";
-        var elements = document.getElementsByClassName('navLinks');
-        for(var i = 0, length = elements.length; i < length; i++) {
+        let elements = document.getElementsByClassName('navLinks'); 
+        for(let i = 0, length = elements.length; i < length; i++) {
               elements[i].style.color="white";
            
         }
@@ -89,9 +89,9 @@ function Navbar(props) {
                     <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{modeLabel}</label>
                 </div>
             {!localStorage.getItem('token') ? <form className="d-flex">
-              <Link className="btn btn-primary mx-3" to="/login" role="button">Login</Link>
-              <Link className="btn btn-primary" to="/signup" role="button">Signup</Link>
-            </form> : <button onClick={handleLogout} className="btn btn-primary mx-3">Logout</button>}
+              <Link className="btn btn-sucsess mx-3" to="/login" role="button">Login</Link>
+              <Link className="btn btn-danger" to="/signup" role="button">Signup</Link>
+            </form> : <button onClick={handleLogout} className="btn btn-danger mx-3">Logout</button>}
           </div>
         </div>
       </nav>

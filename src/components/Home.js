@@ -1,12 +1,12 @@
 import React from 'react'
-import slide1 from './images/cook-1.jpg'
+import slide1 from './images/bai.jpg'
 import slide2 from './images/cloth-wash-1.jpg'
 import slide3 from './images/baby-sitter-2.jpg'
 
 import feat1 from './images/jhadu-pocha.jpg'
 import feat2 from './images/oldage-1.jpg'
 import feat3 from './images/baby-sitter-1.jpg'
-import { Link } from 'react-router-dom'
+
 
 const Home = () => {
   return (
@@ -28,7 +28,7 @@ const Home = () => {
             <div className="carousel-caption text-start text-dark">
               <h1 className='fw-bold' >Struggling in finding maids ?</h1>
               <p>Then you are at right place. we'll provide best services.</p>
-              <p><Link className="btn btn-lg btn-danger" to="/signup">Sign up today</Link></p>
+              <p><a className="btn btn-lg btn-danger" href="/signup">Sign up today</a></p>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ const Home = () => {
             <div className="carousel-caption text-dark">
               <h1 className='fw-bold'>Are you looking for a job and want to provide services?</h1>
               <p>Sign up today as a worker and get hired by clients today.</p>
-              <p><Link className="btn btn-lg btn-danger" to="/registerworker">Register now</Link></p>
+              <p><a className="btn btn-lg btn-danger" href="/registerworker">Register now</a></p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Home = () => {
             <div className="carousel-caption text-end text-dark">
               <h1 className='fw-bold'>Explore services we provide.</h1>
               <p>Select the service and get the right match for you.</p>
-              <p><Link className="btn btn-lg btn-danger" to="/services">Browse services</Link></p>
+              <p><a className="btn btn-lg btn-danger" href="/services">Browse services</a></p>
             </div>
           </div>
         </div>
@@ -74,39 +74,6 @@ const Home = () => {
   
     <div className="container marketing">
   
-      {/* <!-- Three columns of text below the carousel --> */}
-      <div className="row">
-        <div className="col-lg-4">
-          <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2>Heading</h2>
-          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a className="btn btn-danger" href="/">View details »</a></p>
-        </div>
-        {/* <!-- /.col-lg-4 --> */}
-        <div className="col-lg-4">
-          <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2>Heading</h2>
-          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-          <p><a className="btn btn-danger" href="/">View details »</a></p>
-        </div>
-        {/* <!-- /.col-lg-4 --> */}
-        <div className="col-lg-4">
-          <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2>Heading</h2>
-          <p>And lastly this, the third column of representative placeholder content.</p>
-          <p><a className="btn btn-danger" href="/">View details »</a></p>
-        </div>
-        {/* <!-- /.col-lg-4 --> */}
-      </div>
-      {/* <!-- /.row --> */}
-  
-  
-      {/* <!-- START THE FEATURETTES --> */}
-  
-      <hr className="featurette-divider"/>
   
       <div className="row featurette">
         <div className="col-md-7">

@@ -11,10 +11,9 @@ const Profile = () => {
   const { _id } = location.state
 
   useEffect(() => {
-
     getWorkerProfile(_id)
   
-  }, [])
+  })
   
   const {gender} = workers
 

@@ -6,7 +6,7 @@ import Services from './components/Services';
 import RegisterWorker from './components/RegisterWorker';
 import WorkersState from './context/workers/WorkersState'
 import Alert from "./components/Alert";
-import React , {useState , useEffect} from "react";
+import React , {useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -30,7 +30,6 @@ function App() {
   };
 
   
-
   return (
 
     <WorkersState>
